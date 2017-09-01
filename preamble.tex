@@ -1,27 +1,23 @@
 
-% Plantilla versió 2.6.1                                4 / 1 / 2017
-
+% FCCordoba Template version                            31 / 08 / 2017
  
-
- \usepackage{bbm}                                       % Permet fer \1
-            %%% Nota: Si la plantilla no compila, comenta els dos packages anteriors.
- \usepackage[utf8]{inputenc}                            % Accents i símbols extranys
- \usepackage{amsfonts,amssymb}                          % Símbols matemàtics
- \usepackage{mathrsfs}                                  % Lletra cal·ligràfica (millor que \mathcal)
- \usepackage{amsmath}                                   % Mode matemàtic
-\usepackage{amsthm}										% TheoremStyle
+ 
+ \usepackage[utf8]{inputenc}	% Accents and other symbols
+ \usepackage{bbm}	% Permet fer \1
+ %%% Nota: Si la plantilla no compila, comenta els dos packages anteriors. \usepackage{amsfonts,amssymb}                          % Símbols matemàtics
+ \usepackage{mathrsfs}                                  % Lletra cal·ligrafica (millor que \mathcal)
+ \usepackage{amsmath, amsthm, amsfonts, amssymb}        % Mode matemàtic, TheoremStyle, Simbols matematics
 %\usepackage{bookman}                                   % BarreroTimes
  \usepackage{verbatim}                                  % Verbatim + comentaris multilínia
  \usepackage{graphicx,subcaption}                       % Fotos i subfotos
  \usepackage[free-standing-units]{siunitx}              % Sistema internacional
  \usepackage[siunitx, american]{circuitikz}             % Circuits
- \usepackage{float}                                     % Posa les figures on toca
- \usepackage{anysize}                                   % Posa els marges
+ \usepackage{float}                                     % Posa les figures on toca amb [H]
+ \usepackage{anysize}                                   % Per usar \marginsize{}{}{}{}
  \marginsize{2cm}{2cm}{1cm}{4cm}     % {L}{R}{U}{D}
  \usepackage{tikz-cd}                                   % Diagrames commutatius
-% \usetikzlibrary{babel}                                 % Evita interferència entre tikz-cd i babel
-\usepackage{helvet}                                     % Estas dos lineas
-%\renewcommand{\familydefault}{\sfdefault}               % ponen Arial
+% \usetikzlibrary{babel}                                % Evita interferència entre tikz-cd i babel
+\usepackage{helvet} \renewcommand{\familydefault}{\sfdefault}        % Estas dos lineas               % ponen Arial
 \usepackage[toc,page]{appendix}                         % for appendices
 \usepackage{enumerate}					% enumerate options
 \usepackage{hyperref}					%for hyperrefferences  (needed in bibliography
@@ -190,11 +186,3 @@
 
 % Per veure si falta res en un treball (el típic "ho deixo per després")
 \DeclareMathOperator*{\completar}{\_\_\_\_\_\_\_\_\_\_}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%       						             %%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%        THE DOCUMENT STARTS HERE         %%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%       						             %%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
