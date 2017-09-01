@@ -1,0 +1,200 @@
+
+% Plantilla versió 2.6.1                                4 / 1 / 2017
+
+ 
+
+ \usepackage{bbm}                                       % Permet fer \1
+            %%% Nota: Si la plantilla no compila, comenta els dos packages anteriors.
+ \usepackage[utf8]{inputenc}                            % Accents i símbols extranys
+ \usepackage{amsfonts,amssymb}                          % Símbols matemàtics
+ \usepackage{mathrsfs}                                  % Lletra cal·ligràfica (millor que \mathcal)
+ \usepackage{amsmath}                                   % Mode matemàtic
+\usepackage{amsthm}										% TheoremStyle
+%\usepackage{bookman}                                   % BarreroTimes
+ \usepackage{verbatim}                                  % Verbatim + comentaris multilínia
+ \usepackage{graphicx,subcaption}                       % Fotos i subfotos
+ \usepackage[free-standing-units]{siunitx}              % Sistema internacional
+ \usepackage[siunitx, american]{circuitikz}             % Circuits
+ \usepackage{float}                                     % Posa les figures on toca
+ \usepackage{anysize}                                   % Posa els marges
+ \marginsize{2cm}{2cm}{1cm}{4cm}     % {L}{R}{U}{D}
+ \usepackage{tikz-cd}                                   % Diagrames commutatius
+% \usetikzlibrary{babel}                                 % Evita interferència entre tikz-cd i babel
+\usepackage{helvet}                                     % Estas dos lineas
+%\renewcommand{\familydefault}{\sfdefault}               % ponen Arial
+\usepackage[toc,page]{appendix}                         % for appendices
+\usepackage{enumerate}					% enumerate options
+\usepackage{hyperref}					%for hyperrefferences  (needed in bibliography
+\usepackage[square,comma,numbers,sort&compress]{natbib} % bibliography stuff (see http://www.colorado.edu/physics/phys4610/phys4610_sp12/bibtex_guide.pdf)
+
+\theoremstyle{definition} \newtheorem{definition}{Definition}%[chapter]
+\theoremstyle{definition} \newtheorem{axiom}{Axiom}%[chapter]
+\theoremstyle{plain} \newtheorem{theorem}{Theorem}%[chapter]
+\theoremstyle{plain} \newtheorem{proposition}{Proposition}%[chapter]
+\theoremstyle{plain} \newtheorem*{lemma}{Lemma}
+\theoremstyle{remark} \newtheorem*{corollary}{Corollary}
+\theoremstyle{remark} \newtheorem*{remark}{Remark}
+\theoremstyle{remark} \newtheorem*{notation}{Notation}
+%\theoremstyle{remark} \newtheorem{Proof}{Proof}
+
+\renewenvironment{proof}{\\ \textit{Proof.  } \begin{rm} \small }{ \normalsize $\qed$ \end{rm}}
+
+
+%Conjunts importants
+\def\NN{\mathbb N}   % Naturals
+\def\ZZ{\mathbb Z}   % Enters
+\def\QQ{\mathbb Q}   % Racionals
+\def\RR{\mathbb R}   % Reals
+\def\CC{\mathbb C}   % Complexos
+\def\HH{\mathbb H}   % Quaternions, semiplà superior complex
+\def\AA{\mathbb A}   % Espai afí en general
+\def\EE{\mathbb E}   % Extensió d'un cos, esperança
+\def\FF{\mathbb F}   % Cos primer, cos finit
+\def\KK{\mathbb K}   % Cos en general
+\def\PP{\mathbb P}   % Espai projectiu, nombres primers
+\def\DD{\mathbb D}   % Disc unitat complex
+\def\SS{\mathbb S}   % Esfera
+\def\TT{\mathbb T}   % Tor (n-dimensional)
+\def\XX{\mathbb X}
+
+% Per escriure menys
+\def\oo{\infty}                                         % Infinit
+\def\P{\mathscr P}                                      % Conjunt potència
+\def\A{\mathscr A}                                      % Àlgebra, sigma-àlgebra
+\def\B{\mathscr B}                                      % Base
+\def\T{\mathscr T}                                      % Topologia
+\def\L{\mathscr L}                                      % Espai d'homomorfismes, derivada de Lie
+\def\C{\mathcal C}                                      % Funcions contínues, derivables amb continuïtat
+\def\O{\mathcal O}										% big O notation
+\def\D{\mathscr D}                                      % Funcions derivables
+\def\mm{\mathfrak M}                                    % Matrius
+%\def\ss{\mathfrak S}                                    % Grup simètric
+\def\aa{\mathfrak A}                                    % Grup alternat
+\def\Re#1{\mathfrak {Re}\left\{#1\right\}}              % Part real
+\def\Im#1{\mathfrak {Im}\left\{#1\right\}}              % Part imaginària
+\def\1{\mathbbm{1}}                                     % Funció indicadora
+\def\<{\langle}                                         % subespai/ideal/subgrup -
+\def\>{\rangle}%                                          generat per, producte escalar
+\def\sect{\mathsection}                                 % Secció
+\def\pgph{\mathparagraph}                               % Fi de paràgraf
+\def\qed{\hfill\square}                                 % Quadrat blanc de Q.E.D.
+
+%Calia
+\def\phi{\varphi}       %%% Aquesta comanda inhabilita el "\phi" lleig
+\def\eps{\varepsilon}   %\epsilon
+
+
+\DeclareMathOperator*{\argmin}{arg\,min}                                 % Punt on s'assoleix el mínim
+\DeclareMathOperator*{\argmax}{arg\,max}                                 % Punt on s'assoleix el màxim
+\DeclareMathOperator*{\mex}{mex}                                         % Mínim ordinal exclòs
+\DeclareMathOperator*{\sgn}{sgn}                                         % Signe
+\DeclareMathOperator*{\im}{Im}                                           % Imatge
+\DeclareMathOperator*{\Tr}{Tr}                                           % Traça
+\DeclareMathOperator*{\Id}{Id}                                           % Identitat
+\DeclareMathOperator*{\supp}{supp}                                       % Suport
+\DeclareMathOperator*{\prolim}{\underleftarrow{\rm{proj\,lim}}}          % Límit projectiu
+\DeclareMathOperator*{\indlim}{\underrightarrow{\rm{ind\,lim}}}          % Límit inductiu
+
+%Trigonometria bàsica
+\DeclareMathOperator*{\tg}{tg}                          % tg(·)          = sin(·)/cos(·)
+\DeclareMathOperator*{\cosec}{cosec}                    % cosec(·)       = 1/sin(·)
+\DeclareMathOperator*{\cotg}{cotg}                      % cotg(·)        = cos(·)/sin(·)
+
+\DeclareMathOperator*{\arctg}{arctg}
+\DeclareMathOperator*{\arcsec}{arcsec}
+\DeclareMathOperator*{\arccosec}{arccosec}
+\DeclareMathOperator*{\arccotg}{arccotg}
+
+\DeclareMathOperator*{\tgh}{tgh}                        % tgh(·)         = sinh(·)/cosh(·)
+\DeclareMathOperator*{\sech}{sech}                      % sech(·)        = 1/cosh(·)
+\DeclareMathOperator*{\cosech}{cosech}                  % cosech(·)      = 1/sinh(·)
+\DeclareMathOperator*{\cotgh}{cotgh}                    % cotgh(·)       = cosh(·)/sinh(·)
+
+\DeclareMathOperator*{\arcsinh}{arcsinh}
+\DeclareMathOperator*{\arccosh}{arccosh}
+\DeclareMathOperator*{\arctgh}{arctgh}
+\DeclareMathOperator*{\arcsech}{arcsech}
+\DeclareMathOperator*{\arccosech}{arccosech}
+\DeclareMathOperator*{\arccotgh}{arccotgh}
+
+% Operadors grans
+\DeclareMathOperator*{\bigcomma}{\raisebox{0.9ex}{\Huge ,}}  % Comatori                    %% e.g. $\RR = \left\{\bigcomma\limits_{x\in\RR} x \right\}$
+\DeclareMathOperator*{\bigtimes}{\text{\Large $\times$}}     % Cartesionatori              %% e.g. $\bigtimes\limits_{i\in B} A = A^B :=\{f:B\to A\}$
+\DeclareMathOperator*{\bigvoid}{\text{\Large $\O$}}          % Concatenatori               %% e.g. $\bigvoid\limits_{i=1}^n \left(\sum\limits_{j_i=1}^n\right) 1 = n^n$
+\DeclareMathOperator*{\bigequals}{\text{\Large $=$}}         % Igualatori                  %% e.g. $\bigequals\limits_{n=1}^\oo \sum\limits_{i=1}^n \dfrac1n$
+\DeclareMathOperator*{\bigle}{\text{\Large $\le$}}           % Creixentatori               %% e.g. $0<\bigle\limits_{n=1}^\oo a_n<k\implies\exists\lim\limits_{n\to\oo}a_n\leq k$
+\DeclareMathOperator*{\bigge}{\text{\Large $\ge$}}           % Decreixentatori
+\DeclareMathOperator*{\bigless}{\text{\Large $<$}}           % Creixentatori estricte
+\DeclareMathOperator*{\biggreater}{\text{\Large $>$}}        % Decreixentatori estricte
+\DeclareMathOperator*{\bigsse}{\text{\Large $\sse$}}         % Inclusionatori              %% e.g. $\O\sse\bigsse\limits_{n=1}^\oo (-n,n)\sse\R$
+\DeclareMathOperator*{\bigspse}{\text{\Large $\spse$}}       % Antiinclusionatori
+\DeclareMathOperator*{\bigsss}{\text{\Large $\sss$}}         % Inclusionatori estricte
+\DeclareMathOperator*{\bigssne}{\text{\Large $\ssne$}}       % Inclusionatori estricte
+\DeclareMathOperator*{\bigssps}{\text{\Large $\ssps$}}       % Antiinclusionatori estricte
+\DeclareMathOperator*{\bigspsne}{\text{\Large $\spsne$}}     % Antiinclusionatori estricte
+\DeclareMathOperator*{\bigni}{\text{\Large $\ni$}}           % Contenatori                 %% e.g. $\nexists\bigni\limits_{i=0}^\oo A_i$
+\DeclareMathOperator*{\bigin}{\text{\Large $\in$}}           % Pertanyatori
+\DeclareMathOperator*{\bigo}{\bigcirc}                       % Compositori                 %% e.g. $\bigequals\limits_{x\in\R}\left(\bigo\limits_{i=1}^\oo \cos\right) (x)$
+\DeclareMathOperator*{\bigfrac}{\raisebox{-.5ex}{\Large K}}  % K-atori                     %% e.g. $\bigfrac\limits_{i=1}^\oo(b_i:c_i):=\cfrac{b_1}{c_1+\cfrac{b_2}{c_2+\ddots}}$
+            %%% Nota: El sumadirectori (\bigoplus), els dos uniodisjuntatoris (\bigsqcup, \biguplus) i el tensionatori (\bigotimes) ja estan implementats per defecte.
+
+% Permet fer peus de pàgina amb altres símbols
+\makeatletter
+\def\@xfootnote[#1]{\protected@xdef\@thefnmark{#1}\@footnotemark\@footnotetext}
+\makeatother
+
+% Permet fer arrels amb palet
+\newcommand{\sqrtt}[1][\hphantom{3}]{%
+  \def\DHLindex{#1}\mathpalette\DHLhksqrt}
+\def\DHLhksqrt#1#2{%
+  \setbox0=\hbox{$#1\sqrt[\DHLindex]{#2\,}$}\dimen0=\ht0
+  \advance\dimen0-0.2\ht0
+  \setbox2=\hbox{\vrule height\ht0 depth -\dimen0}%
+  {\box0\lower0.4pt\box2}}
+
+% Objectes no textuals
+\begin{comment}
+--------------------Taula--------------------
+
+    http://www.tablesgenerator.com
+
+-------------Diagrama Commutatiu-------------
+
+    http://osl.ugr.es/CTAN/graphics/pgf/contrib/tikz-cd/tikz-cd-doc.pdf
+
+-------------------Circuit-------------------
+
+    http://texdoc.net/texmf-dist/doc/latex/circuitikz/circuitikzmanual.pdf
+
+--------------------Foto---------------------
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=\linewidth]{Imatges/Loremipsum.png}
+    \end{figure}
+
+-------------------Subfoto-------------------
+
+    \begin{figure}[H]
+        \begin{subfigure}[b]{.5\linewidth}
+            \centering
+            \includegraphics[width=\linewidth]{Imatges/Lorem.png}
+        \end{subfigure}
+        \begin{subfigure}[b]{.5\linewidth}
+            \centering
+            \includegraphics[width=\linewidth]{Imatges/Ipsum.png}
+        \end{subfigure}
+    \end{figure}
+
+\end{comment}
+
+% Per veure si falta res en un treball (el típic "ho deixo per després")
+\DeclareMathOperator*{\completar}{\_\_\_\_\_\_\_\_\_\_}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%       						             %%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%        THE DOCUMENT STARTS HERE         %%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%       						             %%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
